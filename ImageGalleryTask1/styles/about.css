@@ -1,0 +1,45 @@
+/* About Page Specific Styles */
+
+/* About Section */
+.about-section {
+    margin-top: 35px;
+    padding: 50px 0;
+}
+
+.about-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Team Section */
+.team-section {
+    margin-top: 50px;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.team-member h5 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: gray;
+}

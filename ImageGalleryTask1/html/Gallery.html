@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KanwalVisions - Gallery</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles/baseStyles.css">
+    <link rel="stylesheet" href="../styles/gallery.css">
+</head>
+<body>
+    <!-- Navbar (Same as before) -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="height: 60px;">
+        <div class="container">
+            <a class="navbar-brand" href="#">KanwalVisions</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Title Section -->
+    <section class="gallery-title text-center py-5">
+        <h1 class="display-4">Our Image Gallery</h1>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section py-5">
+        <div class="container">
+            <!-- Image Grid (4 images per row) -->
+            <div class="row" id="gallery">
+                <div class="col-md-3 mb-3">
+                    <img src="../Images/image1.jpg" alt="Gallery Image 1" class="img-fluid gallery-image" >
+                </div>
+                <div class="col-md-3 mb-3">
+                    <img src="../Images/image2.jpg" alt="Gallery Image 2" class="img-fluid gallery-image" >
+                </div>
+                <div class="col-md-3 mb-3">
+                    <img src="../Images/image3.jpg" alt="Gallery Image 3" class="img-fluid gallery-image" >
+                </div>
+                <div class="col-md-3 mb-3">
+                    <img src="../Images/image4.jpg" alt="Gallery Image 4" class="img-fluid gallery-image" >
+                </div>
+                <div class="col-md-3 mb-3">
+                    <img src="../Images/image5.jpg" alt="Gallery Image 5" class="img-fluid gallery-image">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <img src="../Images/image6.jpg" alt="Gallery Image 6" class="img-fluid gallery-image">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <img src="../Images/image7.jpg" alt="Gallery Image 7" class="img-fluid gallery-image">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <img src="../Images/image8.jpg" alt="Gallery Image 8" class="img-fluid gallery-image">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <img src="../Images/image9.jpg" alt="Gallery Image 9" class="img-fluid gallery-image">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <img src="../Images/image10.jpg" alt="Gallery Image 10" class="img-fluid gallery-image">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <img src="../Images/image17.jpg" alt="Gallery Image 11" class="img-fluid gallery-image">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <img src="../Images/image12.jpg" alt="Gallery Image 12" class="img-fluid gallery-image">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <img src="../Images/image13.jpg" alt="Gallery Image 13" class="img-fluid gallery-image">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <img src="../Images/image14.jpg" alt="Gallery Image 14" class="img-fluid gallery-image">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <img src="../Images/image15.jpg" alt="Gallery Image 15" class="img-fluid gallery-image">
+                </div>
+                <div class="col-md-3 mb-3">
+                    <img src="../Images/image16.jpg" alt="Gallery Image 16" class="img-fluid gallery-image">
+                </div>
+            </div>
+
+            <!-- Upload Button -->
+            <div class="text-center mt-4">
+                <button class="btn btn-primary" id="uploadBtn">Upload Image</button>
+                <input type="file" id="fileInput" accept="image/*" style="display: none;">
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-dark text-white">
+        <p>&copy; 2025 KanwalVisions. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS & Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="../scripts/gallery.js"></script>
+</body>
+</html>

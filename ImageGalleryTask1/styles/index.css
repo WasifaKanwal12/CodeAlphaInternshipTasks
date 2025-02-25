@@ -1,0 +1,78 @@
+/* Hero Section */
+.hero-section {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+}
+
+/* Explore Section Styles */
+.explore-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/* Carousel Container */
+.explore-section .image-carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Ensures full width of the row */
+    margin: 0 auto;
+}
+
+/* Carousel Images Container */
+.explore-section .carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px; /* Add space between images */
+}
+
+/* Carousel Image Item */
+.explore-section .carousel-image {
+    width: 24%; /* Display 4 images at a time with space */
+    height: 350px; /* Increased height for the images */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover effect for zooming images */
+.explore-section .carousel-image:hover {
+    transform: scale(1.1);
+}
+
+/* Arrow Buttons */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    font-size: 2em;
+    padding: 10px;
+    z-index: 10;
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
+}
+
+.arrow:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
