@@ -1,0 +1,185 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image:url("Images/background.avif") ;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Container */
+  .container {
+    background-color: white;
+    width: 100%;
+    max-width: 380px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: all 0.3s ease; 
+  }
+  
+  /* Mode Header */
+  .mode-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+#mode-toggle {
+    background: none; 
+    border: none; 
+    color: inherit; 
+    font-size: 16px; 
+    font-weight: normal; 
+    padding: 0; 
+    cursor: pointer; 
+    text-decoration: underline; 
+  }
+  
+  #mode-toggle:hover {
+    color: #333; 
+    text-decoration: underline; 
+  }
+  
+  #mode-toggle:focus {
+    outline: none;
+  }
+  
+
+ 
+  #display {
+    width: 91%;
+    height: 50px;
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    transition: width 0.3s ease; 
+  }
+  
+  /* Standard Mode Layout (Vertical) */
+  #standard-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  #scientific-buttons {
+    display: none;
+    grid-template-columns: repeat(8, 1fr); 
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  
+  #scientific-buttons .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+   
+  #Ac{
+    background-color: rgb(219, 10, 10);
+    box-shadow: 0 0 4px rgba(219, 10, 10, 0.3);
+  }
+  
+  
+  #scientific-buttons {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .container.scientific {
+    max-width: 800px; 
+  }
+  
+  
+  
+  /* Buttons */
+  button {
+    font-size: 18px;
+    padding: 20px; 
+    border: 2px solid #ccc;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    border-radius: 5px; 
+    height: 60px; 
+    width: 80%;
+  }
+  
+  .opr{
+    background-color: rgb(58, 56, 56);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    color: white;
+  }
+
+  button:hover {
+    background-color: #8f8e8e;
+    transform: scale(1.05); 
+  }
+  
+  button:active {
+    transform: scale(0.98); 
+  }
+  
+
+  #standard-buttons .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  
+  /* Button Layout for Scientific Mode */
+  #scientific-buttons .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  
+  /* For Scientific Mode: Expand container width */
+  .container.scientific {
+    max-width: 800px; 
+  }
+  
+  #display.scientific {
+    width: 95%; 
+    font-size: 18px; 
+  }
+  
+  /* Specific style for = button */
+button:active {
+    transform: scale(0.98);
+}
+
+#standard-buttons .btn:nth-child(19), 
+#scientific-buttons .btn:nth-child(38) { 
+    background-color: rgb(58, 56, 56); 
+    color: white;  
+    border-radius: 50%; 
+    width: 70px; 
+    height: 70px; 
+    font-size: 24px; 
+    padding: 0; 
+    transition: background-color 0.3s, transform 0.1s ease-in-out;
+}
+
+#standard-buttons .btn:nth-child(19):hover,
+#scientific-buttons .btn:nth-child(38):hover {
+    background-color: rgb(30, 30, 31); 
+}
+
+#standard-buttons .btn:nth-child(19):active,
+#scientific-buttons .btn:nth-child(38):active {
+    background-color: #131414; 
+}
