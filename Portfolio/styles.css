@@ -1,0 +1,611 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+    text-decoration: none;
+    color: #fff; /* White text for links */
+}
+
+a:hover {
+    color: #00ff00; /* Green text on hover */
+}
+/* Add scroll-margin-top to all sections */
+section {
+    scroll-margin-top: 60px; /* Height of the fixed header */
+}
+/* Header Section */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111; /* Darker black for header */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s; /* Add transition for smooth theme change */
+}
+
+.header-left .name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff; 
+}
+
+.header-center ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-center ul li {
+    margin: 0 15px;
+}
+
+.header-center ul li a {
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.header-center .icon {
+    display: none; /* Hide hamburger icon by default */
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.header-right #theme-toggle {
+    font-size: 24px;
+    margin-right: 60px;
+    cursor: pointer;
+    color: #fff; /* White icon */
+}
+
+/* Light Mode Styles */
+body.light-mode {
+    background-color: #fff;
+    color: #000;
+}
+
+body.light-mode #header {
+    background-color: #f8f9fa; 
+}
+
+body.light-mode a {
+    color: #000;
+}
+
+body.light-mode a:hover {
+    color: #00ff00;
+}
+
+body.light-mode .header-left .name {
+    color: #000;
+}
+
+body.light-mode .header-right #theme-toggle {
+    color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Hide the regular menu items */
+    .header-center ul {
+        display: none;
+    }
+
+    /* Show the hamburger menu icon */
+    .header-center .icon {
+        display: block;
+        margin-left: auto; /* Push the icon to the right */
+        margin-right: 20px; /* Add some spacing between the icon and the toggle */
+    }
+
+    /* Adjust header layout for mobile and tablet */
+    #header {
+        justify-content: flex-start; /* Align items to the start */
+    }
+
+    .header-left {
+        flex: 1; /* Take up remaining space */
+    }
+
+    .header-center {
+        display: flex;
+        align-items: center;
+    }
+
+    .header-right {
+        margin-left: auto; /* Push the toggle icon to the far right */
+    }
+
+    /* Mobile menu dropdown */
+    .header-center ul.show {
+        display: flex;
+        flex-direction: column;
+        background-color: #111; /* Dark background for mobile menu */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    body.light-mode .header-center ul.show {
+        background-color: #f8f9fa; /* Light background for mobile menu in light mode */
+    }
+
+    .header-center ul.show li {
+        margin: 10px 0;
+    }
+}
+
+/* About Section */
+#about {
+    padding: 100px 20px;
+    background-color: #000; /* Black background by default */
+    color: #fff;
+
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+.about-left {
+    width: 60%;
+}
+
+.about-left .name {
+    font-size: 32px; 
+    color: #00ff00; 
+    margin-bottom: 5px; 
+    font-weight: normal; 
+    line-height: 1.2; 
+}
+
+.about-left .intro {
+    font-size: 36px; 
+    color: #fff; 
+    margin-bottom: 5px; 
+    font-weight: normal; 
+    line-height: 1.2; 
+}
+
+
+
+.about-left .description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.about-left .btn {
+    padding: 10px 20px;
+    background-color: #00ff00;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.about-left .btn:hover {
+    background-color: #00cc00;
+}
+
+.about-right {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container {
+    width: 300px;
+    height: 300px;
+    border: 5px solid #00ff00;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Light Mode Styles for About Section */
+body.light-mode #about {
+    background-color: #fff; 
+    color: #000; 
+}
+
+body.light-mode .about-left .name,
+body.light-mode  {
+    color: #00ff00; 
+}
+
+body.light-mode .about-left .intro {
+    color: #000; 
+}
+
+body.light-mode .about-left .btn {
+    background-color: #00ff00;
+    color: #000;
+}
+
+/* Responsive Design for About Section */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-left, .about-right {
+        width: 100%;
+    }
+
+    .about-left .name {
+        font-size: 28px;
+    }
+
+    .about-left .intro {
+        font-size: 32px;
+    }
+
+    
+    .about-left .description {
+        font-size: 16px;
+    }
+
+    .about-right {
+        margin-top: 30px;
+    }
+
+    .image-container {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-left .name {
+        font-size: 24px;
+    }
+
+    .about-left .intro {
+        font-size: 28px;
+    }
+
+   
+
+    .about-left .description {
+        font-size: 14px;
+    }
+
+    .image-container {
+        width: 200px;
+        height: 200px;
+    }
+}
+/* Skills Section */
+#skills {
+    padding: 100px 20px;
+    padding-top: 0px;
+    background-color: #000; /* Black background by default */
+    color: #fff;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#skills h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: normal;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 items per row */
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.skill-item:hover {
+    transform: scale(1.1); /* Slightly scale up on hover */
+}
+
+.skill-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease; /* Smooth transition for image */
+}
+
+.skill-item p {
+    font-size: 16px;
+    color: #fff; /* White text by default */
+    margin: 0;
+}
+
+/* Light Mode Styles for Skills Section */
+body.light-mode #skills {
+    background-color: #fff; /* White background in light mode */
+    color: #000; /* Black text in light mode */
+}
+
+body.light-mode .skill-item p {
+    color: #000; /* Black text in light mode */
+}
+
+/* Responsive Design for Skills Section */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row on mobile */
+    }
+
+    #skills h2 {
+        font-size: 28px;
+    }
+
+    .skill-item img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .skill-item p {
+        font-size: 14px;
+    }
+}
+
+/* Projects Section */
+#projects {
+    padding: 60px 20px; 
+    padding-top: 0px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#projects h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: normal;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-item {
+    border: 2px solid #00ff00; 
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.3); 
+}
+
+.project-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #00ff00; 
+}
+
+.project-item p {
+    font-size: 16px;
+    color: #fff; 
+    margin: 0;
+}
+
+/* Light Mode Styles for Projects Section */
+body.light-mode #projects {
+    background-color: #fff; 
+    color: #000; 
+}
+
+body.light-mode .project-item {
+    border-color: #00ff00; 
+}
+
+body.light-mode .project-item h3 {
+    color: #00ff00; 
+}
+
+body.light-mode .project-item p {
+    color: #000; 
+}
+
+/* Responsive Design for Projects Section */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    #projects h2 {
+        font-size: 28px;
+    }
+
+    .project-item h3 {
+        font-size: 20px;
+    }
+
+    .project-item p {
+        font-size: 14px;
+    }
+}
+/* Contact Us Section */
+#contact {
+   margin-bottom: 3px;
+   margin-top: 0px;
+    background-color: #000; /* Black background by default */
+    color: #fff;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.contact-info a {
+    color: #00ff00; /* Green text for email link */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #00cc00; /* Darker green on hover */
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #fff; /* White icons by default */
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #00ff00; /* Green icons on hover */
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #111; /* Darker black for footer */
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+footer p {
+    font-size: 16px;
+    margin: 0;
+    color: #fff; 
+}
+
+/* Light Mode Styles for Contact Us and Footer */
+body.light-mode #contact {
+    background-color: #fff; 
+    color: #000; 
+}
+
+body.light-mode .contact-info a {
+    color: #00ff00; 
+}
+
+body.light-mode .social-icons a {
+    color: #000; 
+}
+
+body.light-mode .social-icons a:hover {
+    color: #00ff00; 
+}
+
+body.light-mode footer {
+    background-color:#f8f9fa;
+}
+
+body.light-mode footer p {
+    color: #000; 
+}
+
+/* Responsive Design for Contact Us and Footer */
+@media (max-width: 768px) {
+    #contact h2 {
+        font-size: 32px;
+    }
+
+    .contact-info p {
+        font-size: 16px;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #contact h2 {
+        font-size: 28px;
+    }
+
+    .contact-info p {
+        font-size: 14px;
+    }
+
+    .social-icons a {
+        font-size: 18px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+}
